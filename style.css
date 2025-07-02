@@ -60,7 +60,6 @@ padding-top: 40px;
 padding: 20px;
 position: relative;
 }
-
 .title {
 font-weight: bold;
 position: relative;
@@ -293,7 +292,7 @@ button:active {
     height: 100vh;
     background: rgba(239, 239, 239, 0.95);  /* 원하는 투명도 조절 */
     padding: 40px 20px;
-    margin-top: 36px;
+    margin-top: 60px;
     z-index: 1000;
   }
   .sidebar.active {
@@ -324,10 +323,7 @@ button:active {
   .content {
     position: static !important; 
     width: 100% !important;
-    padding-left: 20px !important;  /* 왼쪽 20px */
-    padding-right: 20px;           /* 오른쪽도 동일 적용 (원하는 경우) */
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px !important;  /* 왼쪽 20px */
     word-wrap: break-word;
     overflow-wrap: break-word; /* 안전하게 줄바꿈 */
     white-space: normal;       /* nowrap 방지 */
@@ -369,8 +365,9 @@ h3 {
   
   .fixed-logo {
   width: 80vw;
-  position: fixed;
+  position: relative;
   left: 50%;
+  bottom: 20px;
   transform: translateX(-50%);
   bottom: 0;
   }
