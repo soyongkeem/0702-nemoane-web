@@ -2,7 +2,7 @@ html, body {
  width: 100%;
 margin: 0;
 padding: 0;
-font-size: 18px;
+font-size: 17px;
 line-height: 1.8;
 }
 
@@ -75,7 +75,7 @@ display: inline-block;
 }
 
 .title a .eng {
-font-size: 36px;
+font-size: 32px;
 visibility: visible;
 transition: color 0.3s; /* 부드럽게 색상 전환 */
 }
