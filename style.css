@@ -233,7 +233,7 @@ border-radius: 4px;
   cursor: pointer;
   position: absolute;
   right: 0;
-  z-index: 1001;
+  z-index: 1100;
 }
 
 
@@ -271,18 +271,28 @@ button:active {
     font-size: 28px;
   }
 
-.header {
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 20px;
-    padding-right: 20px;
+  .header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1002;  /* 충분히 큰 값 */
+    background: #efefef;  /* 배경을 넣어 다른 요소 가림 */
+    padding: 10px 20px;
+    box-sizing: border-box;
   }
 
   .hamburger {
     display: block;
-    padding-right: 20px;
-  padding: 10px 15px;  /* 터치 영역 확대 */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 24px;
+    z-index: 1100;  /* header보다 높게 둘 필요는 없음. header 안이므로 이정도로 ok */
+    padding: 0;
   }
+
 .sidebar {
     display: none;
     position: fixed;
@@ -323,7 +333,7 @@ button:active {
   .content {
     position: static !important; 
     width: 100% !important;
-    padding: 20px !important;  /* 왼쪽 20px */
+    padding: 88px 20px !important;  /* 왼쪽 20px */
     word-wrap: break-word;
     overflow-wrap: break-word; /* 안전하게 줄바꿈 */
     white-space: normal;       /* nowrap 방지 */
