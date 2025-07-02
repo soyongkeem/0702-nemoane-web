@@ -252,4 +252,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
+// 현재 페이지 URL을 기반으로 active 클래스 추가
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPage = window.location.pathname.split('/').pop();
+    const menuLinks = document.querySelectorAll('.menu a');
+    
+    menuLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPage) {
+            link.classList.add('active');
+        }
+    });
+    
+    // 메뉴 클릭시 active 상태 변경
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // 모든 메뉴에서 active 제거
+            menuLinks.forEach(a => a.classList.remove('active'));
+            // 클릭한 메뉴에 active 추가
+            this.classList.add('active');
+        });
+    });
+});
