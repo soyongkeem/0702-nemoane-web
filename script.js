@@ -166,11 +166,10 @@ fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQxmzrw_8wtMVlWn-8kRlygSU
     parsed.data.forEach(row => {
       if (!row.title) return; // 빈 행 방지
 
-      // 링크 여러 개 처리 (link1, link2, link3 열 읽기)
       const links = [];
-      if (row.link1) links.push(`<a href="${row.link1}" target="_blank" style="text-decoration: underline; margin-right: 10px; display: inline-block;">더 알아보기-1</a>`);
-      if (row.link2) links.push(`<a href="${row.link2}" target="_blank" style="text-decoration: underline; margin-right: 10px; display: inline-block;">더 알아보기-2</a>`);
-      if (row.link3) links.push(`<a href="${row.link3}" target="_blank" style="text-decoration: underline; margin-right: 10px; display: inline-block;">더 알아보기-3</a>`);
+if (row.link) {
+  links.push(`<a href="${row.link}" target="_blank" style="text-decoration: underline; margin-right: 10px; display: inline-block;">더 알아보기</a>`);
+}
 
       html += `
         <div class="news-item" style="display: flex; gap: 20px; align-items: flex-start;">
@@ -207,21 +206,21 @@ fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8NliQPcjujheJX7EE7kjzfG
     parsed.data.forEach(row => {
       if (!row.title) return;
 
-      html += `
-        <div class="archive-item" style="margin-bottom: 20px;">
-          <h3>${row.title}</h3>
-          <span style="color: gray;">${row.date || ''}</span>
-          <p><strong>${row.description || ''}</strong></p>
-          <p>${row.body || ''}</p>
-          ${(row.link1 || row.link2 || row.link3) ? `
-            <p>
-              ${row.link1 ? `<a href="${row.link1}" target="_blank">외부링크1</a> ` : ''}
-              ${row.link2 ? `<a href="${row.link2}" target="_blank">외부링크2</a> ` : ''}
-              ${row.link3 ? `<a href="${row.link3}" target="_blank">외부링크3</a>` : ''}
-            </p>` : ''}
-        </div>
-        <hr>
-      `;
+html += `
+  <div class="archive-item" style="margin-bottom: 20px;">
+    <h3>${row.title}</h3>
+    <span style="color: gray;">${row.date || ''}</span>
+    <p><strong>${row.description || ''}</strong></p>
+    <p>${row.body || ''}</p>
+    ${row.link ? `
+      <p>
+        <a href="${row.link}" target="_blank" style="text-decoration: underline; margin-right: 10px; display: inline-block;">더 알아보기</a>
+      </p>` : ''}
+
+  </div>
+  <hr>
+`;
+
     });
 
     document.getElementById('archive-container').innerHTML = html || '데이터가 없습니다.';
