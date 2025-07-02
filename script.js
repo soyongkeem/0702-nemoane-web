@@ -168,9 +168,9 @@ fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQxmzrw_8wtMVlWn-8kRlygSU
 
       // 링크 여러 개 처리 (link1, link2, link3 열 읽기)
       const links = [];
-      if (row.link1) links.push(`<a href="${row.link1}" target="_blank" style="text-decoration: underline; margin-right: 10px; display: inline-block;">더 알아보기1</a>`);
-      if (row.link2) links.push(`<a href="${row.link2}" target="_blank" style="text-decoration: underline; margin-right: 10px; display: inline-block;">더 알아보기2</a>`);
-      if (row.link3) links.push(`<a href="${row.link3}" target="_blank" style="text-decoration: underline; margin-right: 10px; display: inline-block;">더 알아보기3</a>`);
+      if (row.link1) links.push(`<a href="${row.link1}" target="_blank" style="text-decoration: underline; margin-right: 10px; display: inline-block;">더 알아보기-1</a>`);
+      if (row.link2) links.push(`<a href="${row.link2}" target="_blank" style="text-decoration: underline; margin-right: 10px; display: inline-block;">더 알아보기-2</a>`);
+      if (row.link3) links.push(`<a href="${row.link3}" target="_blank" style="text-decoration: underline; margin-right: 10px; display: inline-block;">더 알아보기-3</a>`);
 
       html += `
         <div class="news-item" style="display: flex; gap: 20px; align-items: flex-start;">
