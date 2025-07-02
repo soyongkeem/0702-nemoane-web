@@ -79,8 +79,8 @@ document.addEventListener("DOMContentLoaded", function () {
             !...:!TVBBBRPFT||||||||||!!^^""'   ||||
             !.......:!?|||||!!^^""'            ||||
             !.........||||                     ||||
-            !.........||||      indesign       ||||
-            !.........||||      illustrator    ||||
+            !.........||||      Indesign       ||||
+            !.........||||      Illustrator    ||||
             !.........||||      PhotoShop      ||||
             !.........||||      Lightroom       ||||
             '.........||||                    ,||||
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
 `    *        .              .   *
                     .           
         *     '       *   .  *       
-            * .    '     ( Premire Pro )
+            * .    '     ( Premiere Pro )
                         ( Davinci Resolve )
         ' .                      /  .   *
                 .-'~~~~'-.   /
