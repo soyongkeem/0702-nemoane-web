@@ -302,7 +302,7 @@ button:active {
     height: 100vh;
     background: rgba(239, 239, 239, 0.95);  /* 원하는 투명도 조절 */
     padding: 40px 20px;
-    margin-top: 60px;
+    margin-top: 48px;
     z-index: 1000;
   }
   .sidebar.active {
