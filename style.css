@@ -90,13 +90,44 @@ flex: 1;
 }
 
 .sidebar {
-background: #efefef;
-padding: 20px;
-border-right: 1.8px solid rgb(192, 192, 192);
-display: flex;
-flex-direction: column;
+  background: #efefef;
+  padding: 20px;
+  border-right: 1.8px solid rgb(192, 192, 192);
+  display: flex;
+  flex-direction: column;
 }
 
+.back-to-lobby {
+  margin-top: auto; /* 사이드바 하단으로 밀어냄 */
+  margin-bottom: 40px; /* 하단에서 40px 떨어뜨림 */
+}
+
+.back-to-lobby a {
+  font-size: 21px;
+  font-weight: normal;
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+}
+
+.back-to-lobby a:hover {
+  font-weight: bold;
+  color: rgb(0, 227, 151);
+}
+
+.back-to-lobby a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.sidebar .back-to-lobby a:hover {
+  font-weight: bold;
+  color: rgb(0, 227, 151);
+}
+.sidebar .back-to-lobby a:hover {
+  font-weight: bold;
+  color: rgb(0, 227, 151);
+}
 .menu {
 list-style: none;
 padding: 0;
@@ -115,7 +146,7 @@ padding: 5px;
 }
 
 .menu a:hover {
-background-color: #d7d7d7;
+background-color: #d7d7d7  !important;
 }
 
 .menu a.active {
